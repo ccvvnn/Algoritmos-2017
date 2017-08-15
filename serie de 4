@@ -1,0 +1,20 @@
+#include "stdafx.h"
+#include <iostream>
+#include <math.h>
+#include <conio.h>
+#include <stdlib.h>
+using namespace std;
+
+void main()
+{
+	int s=0, N;
+    do{
+        cout<<"Ingresar N por favor:";
+        cin>>N;
+      }
+     while(N<=0);
+     for (int i=1;i<=N;i=i+4)
+	      s=s+i;
+     cout<<"La suma es:" <<s;
+getch();
+}
