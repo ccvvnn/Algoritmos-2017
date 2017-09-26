@@ -1,0 +1,52 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+#define MAX 100
+using namespace std;
+
+struct templeado
+{int nremp;
+string nombre;
+string apellido;
+string direccion;
+int celular;
+float salariobruto;
+};
+
+void main()
+{templeado empleado[MAX]; 
+ int n, i, m;
+do{
+cout<<"Numero de empleados:"<<endl;
+cin>>n;
+}while(n<0 || n>MAX);
+for(i=0; i<n; i++) {
+empleado[i].nremp=i+1;
+cout<<"Nombre:"<<endl;
+cin>>empleado[i].nombre;
+cout<<"Apellido:"<<endl;
+cin>>empleado[i].apellido;
+cout<<"Direccion:"<<endl;
+cin.ignore();
+getline(cin,empleado[i].direccion);
+cout<<"Celular:"<<endl;
+cin>>empleado[i].celular;
+cout<<"Salario bruto:"<<endl;
+cin>>empleado[i].salariobruto;
+cout<<"Salario Neto: " <<empleado[i].salariobruto-(empleado[i].salariobruto*0.12)<<endl;
+}
+
+do{
+cout<<"Numero de empleados que desea mostrar:"<<endl;
+cin>>m;
+}while(m<0 || m>n);
+cout<<"Numero de empleado: "<<empleado[m].nremp<<endl;
+		 cout<<"Nombre: "<<empleado[m].nombre<<endl;
+		 cout<<"Apellido: "<<empleado[m].apellido<<endl;
+		 cout<<"Direccion: "<<empleado[m].direccion<<endl;
+		 cout<<"Celular: "<<empleado[m].celular<<endl;
+		 cout<<"Salario Bruto: "<<empleado[m].salariobruto<<endl;
+		 cout<<"Salario Neto: " <<empleado[m].salariobruto-(empleado[m].salariobruto*0.12)<<endl;
+getch();
+}
